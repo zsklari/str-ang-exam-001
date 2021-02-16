@@ -3,4 +3,11 @@ export class Hero {
   name: string = '';
   superPower: string = '';
   address: string = '';
+
+  constructor(properties?: Hero) {
+    this.id = properties.id || 0;
+    this.name = properties.name || '';
+    this.superPower = properties?.superPower || '';
+    this.address = properties?.address || '';
+  }
 }
